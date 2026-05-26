@@ -1,4 +1,4 @@
-# 🎬 Niki VOD Core API
+# 🎬 Niki Core API
 
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen)](https://nodejs.org/)
 [![Express.js](https://img.shields.io/badge/framework-Express--4.x-blue)](https://expressjs.com/)
