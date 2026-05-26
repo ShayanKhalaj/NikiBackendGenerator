@@ -1,33 +1,19 @@
-# 🎬 Niki Core API
+🚀 Enterprise API Generator (Niki CLI Core)
+A high-performance scaffolding engine for enterprise-grade backend systems.
 
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen)](https://nodejs.org/)
-[![Express.js](https://img.shields.io/badge/framework-Express--4.x-blue)](https://expressjs.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This generator automates the creation of robust, scalable architectures, allowing developers to bypass boilerplate and focus on business logic. Built with Clean Architecture at its core, it ensures every generated API is maintainable, secure, and production-ready.
 
-A robust, enterprise-ready backend foundation for VOD (Video on Demand) platforms. This project is built using **Clean Architecture** principles and was scaffolded via the **Niki CLI**.
+✨ Key Features
 
----
+🏗 Clean Architecture Scaffold: Automatically generates strict separation of concerns (Controllers, Repositories, Models, and Services).
+**🔐 Instant Security: **In-built JWT authentication, Bcrypt password hashing, and pre-configured Helmet/CORS security layers.
+📑 Auto-Documentation: Generates interactive OpenAPI 3.0 (Swagger) specs on the fly.
+💎 Schema Validation: Automated data validation using Joi/Zod to ensure system integrity.
+🚀 Strategic Scalability: Designed specifically for Enterprise-level traffic and complex data structures.
+🖋 Narrative-Driven Logic: Built by a strategist to ensure the technical flow matches the business story and user journey.
+🚦 Technical Stack
 
-## ✨ Key Features
-
-- 🔐 **Secure Authentication:** Complete Auth system using JWT (JSON Web Tokens) and Bcrypt password hashing.
-- 🏗 **Clean Architecture:** Strict separation of concerns across Controllers, Repositories, and Models.
-- 📑 **Interactive Documentation:** Automated OpenAPI 3.0 specs integrated with Swagger UI.
-- 🛡 **Security First:** Pre-configured with Helmet (secure headers), CORS, and input sanitization.
-- 💎 **Data Validation:** Robust schema validation using Joi.
-- 🚀 **Scalable Design:** Ready for high-traffic media management.
-
----
-
-## 🚦 Getting Started
-
-### Prerequisites
-- **Node.js** (v16.0.0 or higher)
-- **MongoDB** (Local instance or MongoDB Atlas)
-
-### Installation
-1. Clone the repository:
-```bash
-   git clone https://github.com/your-username/vod-api-niki.git
-   cd vod-api-niki
-   
+Core: Node.js, Express.js
+Pattern: Clean Architecture / Dependency Injection
+Validation: Joi
+Security: JWT, Bcrypt, Helmet
