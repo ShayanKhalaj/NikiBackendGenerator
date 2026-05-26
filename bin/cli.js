@@ -16,13 +16,19 @@ async function run() {
 
     switch (cmd) {
         case "init":
-            await createConfig(); // حالا تعریف شده
+            await createConfig();
             break;
         case "create":
             await handleCreate();
             break;
         case "build":
-            await handleBuild(); // حالا تعریف شده
+            await handleBuild();
+            break;
+        case "run": // اضافه شد
+            await handleRun(args[1] || "dev");
+            break;
+        case "start": // اضافه شد
+            await handleRun("start");
             break;
         case "add:model":
             await handleAddModel();
@@ -35,6 +41,7 @@ async function run() {
             showHelp();
             break;
     }
+
 }
 
 /**
@@ -161,21 +168,41 @@ async function handleRemoveModel() {
     }
 }
 
+/**
+ * اجرای پروژه
+ */
+async function handleRun(mode) {
+    const { execSync } = await import("child_process");
+    const pkgPath = path.join(process.cwd(), "package.json");
+
+    if (!fs.existsSync(pkgPath)) {
+        console.log(chalk.red("\n✘ Error: package.json not found. Make sure you are in the project folder."));
+        return;
+    }
+
+    const command = mode === "dev" ? "npm run dev" : "npm start";
+    console.log(chalk.yellow(`\n🚀 Executing: ${command}...\n`));
+
+    try {
+        execSync(command, { stdio: "inherit" });
+    } catch (err) {
+        // خطا معمولاً توسط خود npm لاگ می‌شود
+    }
+}
+
+
 function showHelp() {
     console.log(`
     ${chalk.bold("Usage:")} niki <command> [options]
 
     ${chalk.cyan("Commands:")}
       init            Create a sample niki.config.json
-      create          Interactive project creation
       build           Build project from niki.config.json
+      run dev         Run project in development mode (with nodemon)
+      start           Run project in production mode
+      create          Interactive project creation (Wizard)
       add:model       Add a new model to existing project
       remove:model    Remove a model from project
-
-    ${chalk.cyan("Options:")}
-      --auth          Force enable authentication
-      --no-auth       Force disable authentication
-      --config <path> Use specific config file
     `);
 }
 
