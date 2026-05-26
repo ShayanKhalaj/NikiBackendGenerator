@@ -1,0 +1,55 @@
+{
+  "name": "niki",
+  "version": "1.0.0",
+  "description": "An advanced interactive CLI tool and framework to generate clean-architecture Node.js/Express/Mongoose project structure with automated schemas, validations, repository, controller, and route layers.",
+  "license": "ISC",
+  "author": "Shayan Khalaj",
+  "type": "module",
+  "main": "./index.js",
+  "bin": {
+    "niki": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node ./index.js",
+    "cli": "node ./bin/cli.js",
+    "dev": "node ./bin/cli.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "figlet": "^1.7.0",
+    "inquirer": "^9.2.12",
+    "ora": "^7.0.1"
+  },
+  "keywords": [
+    "express",
+    "mongoose",
+    "node",
+    "joi",
+    "cli",
+    "scaffold",
+    "boilerplate",
+    "generator",
+    "layered-architecture",
+    "clean-architecture",
+    "repository-pattern"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShayanKhalaj/NikiBackendGenerator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShayanKhalaj/NikiBackendGenerator.git"
+  },
+  "homepage": "https://github.com/ShayanKhalaj/NikiBackendGenerator.git"
+}
