@@ -1,5 +1,5 @@
 {
-  "name": "niki-backend-api-generator",
+  "name": "nikipress-backend-api-generator",
   "version": "1.0.0",
   "description": "An advanced interactive CLI tool to generate clean-architecture Node.js projects with automated schemas, validations, repository, controller, and route layers.",
   "license": "MIT",
